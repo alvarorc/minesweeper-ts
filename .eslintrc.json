@@ -1,0 +1,93 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true
+    },
+    "extends": [
+        "airbnb",
+        "plugin:prettier/recommended",
+        "plugin:@typescript-eslint/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+        "@typescript-eslint",
+        "prettier"
+    ],
+    "globals": {
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly"
+    },
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 2018,
+        "sourceType": "module"
+    },
+    "rules": {
+        "prettier/prettier": [
+            "error"
+        ],
+        "no-restricted-globals": 0,
+        "jsx-a11y/label-has-associated-control": 0,
+        "react/no-array-index-key": 0,
+        "react/jsx-curly-newline": 0,
+        "@typescript-eslint/explicit-function-return-type": 0,
+        "@typescript-eslint/member-delimiter-style": 0,
+        "react/jsx-filename-extension": [
+            2,
+            {
+                "extensions": [
+                    ".js",
+                    ".jsx",
+                    ".ts",
+                    ".tsx"
+                ]
+            }
+        ],
+        "import/no-extraneous-dependencies": [
+            2,
+            {
+                "devDependencies": [
+                    "**/test.tsx",
+                    "**/test.ts"
+                ]
+            }
+        ],
+        "import/extensions": [
+            "error",
+            "ignorePackages",
+            {
+                "js": "never",
+                "jsx": "never",
+                "ts": "never",
+                "tsx": "never"
+            }
+        ]
+    },
+    "settings": {
+        "import/parsers": {
+            "@typescript-eslint/parser": [
+                ".ts",
+                ".tsx"
+            ]
+        },
+        "import/resolver": {
+            "typescript": {}
+        }
+    },
+    "overrides": [
+        {
+            "files": [
+                "**/*.tsx"
+            ],
+            "rules": {
+                "react/prop-types": 0,
+                "react/jsx-filename-extension": 0,
+                "react/jsx-one-expression-per-line": "off",
+                "react/jsx-props-no-spreading": 0,
+                "func-names": 0
+            }
+        }
+    ]
+}
